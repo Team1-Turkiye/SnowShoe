@@ -1,0 +1,4 @@
+#!/bin/sh
+# Removes tool credit lines and co-author trailers from the commit message.
+# Installed by `npm run setup`.
+exec node "$(git rev-parse --show-toplevel)/scripts/check-attribution.mjs" --strip "$1"

@@ -1,0 +1,29 @@
+name: Docs or translation
+description: Report a docs problem or offer a translation.
+title: "docs: "
+labels: ["track:docs", "status:needs-triage"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type
+      options:
+        - Error or typo
+        - Missing information
+        - Unclear explanation
+        - Translation
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: Path of the file, for example docs/tracks.md.
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+    validations:
+      required: true

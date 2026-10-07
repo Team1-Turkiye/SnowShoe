@@ -1,0 +1,43 @@
+"track:skills":
+  - changed-files:
+      - any-glob-to-any-file: "skills/**"
+
+"track:mcp":
+  - changed-files:
+      - any-glob-to-any-file: "packages/**"
+
+"track:kits":
+  - changed-files:
+      - any-glob-to-any-file: "kits/**"
+
+"track:ideas":
+  - changed-files:
+      - any-glob-to-any-file: "ideas/**"
+
+"track:evals":
+  - changed-files:
+      - any-glob-to-any-file: ["skills/**/evals/**", "docs/evals.md"]
+
+"track:security":
+  - changed-files:
+      - any-glob-to-any-file: ["SECURITY.md", "docs/supply-chain-rules.md", "scripts/check-secrets.mjs"]
+
+"track:docs":
+  - changed-files:
+      - any-glob-to-any-file: ["docs/**", "*.md", "prompts/**"]
+
+"track:design":
+  - changed-files:
+      - any-glob-to-any-file: ["docs/assets/**", "**/*.svg", "**/*.png"]
+
+"track:community":
+  - changed-files:
+      - any-glob-to-any-file: "community/**"
+
+"track:content":
+  - changed-files:
+      - any-glob-to-any-file: "docs/content/**"
+
+"type:maintenance":
+  - changed-files:
+      - any-glob-to-any-file: [".github/**", "scripts/**", "schemas/**", "package.json"]

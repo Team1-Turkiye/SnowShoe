@@ -1,0 +1,49 @@
+name: MCP tool proposal
+description: Propose a new MCP tool. Read docs/mcp-tool-authoring.md first.
+title: "mcp: "
+labels: ["track:mcp", "status:needs-triage"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Proposed tool name
+      description: snake_case, verb first, for example get_balance.
+    validations:
+      required: true
+  - type: textarea
+    id: job
+    attributes:
+      label: The job
+      description: What can an agent not do today without this tool?
+    validations:
+      required: true
+  - type: textarea
+    id: skill-gap
+    attributes:
+      label: Why a skill is not enough
+      description: Explain why instructions and existing tools cannot do this job.
+    validations:
+      required: true
+  - type: textarea
+    id: io
+    attributes:
+      label: Inputs and outputs
+      description: List inputs with types and the shape of the result.
+    validations:
+      required: true
+  - type: dropdown
+    id: readonly
+    attributes:
+      label: Does the tool change state?
+      options:
+        - No, read only
+        - Yes, it writes
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks
+      description: What could go wrong? How do you limit it?
+    validations:
+      required: true

@@ -1,0 +1,63 @@
+name: Skill proposal
+description: Propose a new skill or a major change to an existing one.
+title: "skill: "
+labels: ["track:skills", "status:needs-triage"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Proposed skill name
+      description: Lowercase with hyphens, for example deploy-contract-fuji.
+    validations:
+      required: true
+  - type: dropdown
+    id: journey
+    attributes:
+      label: Journey
+      options:
+        - learn
+        - idea
+        - build
+        - launch
+        - ecosystem
+    validations:
+      required: true
+  - type: textarea
+    id: job
+    attributes:
+      label: The job
+      description: What does the skill help someone do? State it in one or two sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: audience
+    attributes:
+      label: Audience and prerequisites
+      description: Who is the reader, and what do they already know?
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Official sources
+      description: Link the documentation you will rely on.
+    validations:
+      required: true
+  - type: dropdown
+    id: network
+    attributes:
+      label: Network
+      options:
+        - fuji
+        - mainnet
+        - both
+        - none
+    validations:
+      required: true
+  - type: checkboxes
+    id: owner
+    attributes:
+      label: Ownership
+      options:
+        - label: I will write this skill and maintain it as owner.
+        - label: I am open to a co-author or mentor.

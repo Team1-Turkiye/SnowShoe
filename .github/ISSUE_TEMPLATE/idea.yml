@@ -1,0 +1,40 @@
+name: Idea
+description: Share a project idea or research topic for the ideas backlog.
+title: "idea: "
+labels: ["track:ideas", "status:needs-triage"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Title
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Who has this problem and how do they solve it today?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+      description: What would you build or research?
+    validations:
+      required: true
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty
+      options:
+        - starter
+        - intermediate
+        - advanced
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Links, numbers, or examples that support the idea.

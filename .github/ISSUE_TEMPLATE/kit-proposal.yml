@@ -1,0 +1,39 @@
+name: Kit proposal
+description: Propose a new starter repository or demo.
+title: "kit: "
+labels: ["track:kits", "status:needs-triage"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Proposed kit name
+      description: Lowercase with hyphens.
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: What it builds
+      description: Describe the result in two sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: stack
+    attributes:
+      label: Stack
+      description: Main technologies and versions.
+    validations:
+      required: true
+  - type: input
+    id: time
+    attributes:
+      label: Target time to first run in minutes
+    validations:
+      required: true
+  - type: textarea
+    id: audience
+    attributes:
+      label: Audience
+      description: Who is it for, and where will it be used, for example a workshop?
+    validations:
+      required: true

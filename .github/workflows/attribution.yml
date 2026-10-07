@@ -1,0 +1,28 @@
+name: attribution
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  authorship:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check commit metadata
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: node scripts/check-attribution.mjs --range "origin/${BASE_REF}..HEAD"
+      - name: Check pull request text
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: printf '%s\n%s\n' "$PR_TITLE" "$PR_BODY" | node scripts/check-attribution.mjs --stdin
