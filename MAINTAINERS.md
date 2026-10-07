@@ -5,7 +5,8 @@
 | Name | Role | Areas |
 | --- | --- | --- |
 | Ömer Aksu | Team1 Türkiye Tech Lead, Tech Lead sponsor | Governance, architecture, community |
-| Meriç | Co-maintainer | Skills, MCP |
+| Meriç Kalkan | Co-maintainer | Skills, MCP |
+| Eelvanpsd | Co-maintainer | Skills, MCP |
 
 ## GitHub teams
 
