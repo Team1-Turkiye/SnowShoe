@@ -1,0 +1,28 @@
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.keystore
+
+# Local tooling and editor state
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# Tool-specific agent configuration is not committed. AGENTS.md is the shared file.
+.cl?ude/
+CL?UDE.md
+.cursor/
+.cursorrules
+.aider*
+.github/copilot-instructions.md
+.windsurf/
+.continue/

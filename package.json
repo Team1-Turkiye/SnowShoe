@@ -1,0 +1,27 @@
+{
+  "name": "snowshoe",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Open-source builder stack for Avalanche: verified skills, MCP tools, and kits.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "prepare": "node scripts/setup.mjs --quiet",
+    "validate": "npm run validate:skills && npm run validate:kits && npm run validate:ideas && npm run validate:prompts && npm run lint:style && npm run lint:links && npm run check:secrets && npm run check:attribution",
+    "validate:skills": "node scripts/validate-skills.mjs",
+    "validate:kits": "node scripts/validate-kits.mjs",
+    "validate:ideas": "node scripts/validate-ideas.mjs",
+    "validate:prompts": "node scripts/validate-prompts.mjs",
+    "lint:style": "node scripts/check-style.mjs",
+    "lint:links": "node scripts/check-links.mjs",
+    "check:secrets": "node scripts/check-secrets.mjs",
+    "check:attribution": "node scripts/check-attribution.mjs --files",
+    "check:freshness": "node scripts/check-freshness.mjs",
+    "new:skill": "node scripts/new-skill.mjs",
+    "sync:labels": "node scripts/sync-labels.mjs"
+  }
+}

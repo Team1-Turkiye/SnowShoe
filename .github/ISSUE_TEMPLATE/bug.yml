@@ -1,0 +1,37 @@
+name: Bug report
+description: Report a broken skill, tool, kit, or doc.
+title: "bug: "
+labels: ["type:bug", "status:needs-triage"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: What is affected
+      description: File path, skill name, tool name, or kit name.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened
+      description: Include exact output. Remove any secrets first.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Start from a clean environment.
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: Operating system, Node.js version, network.

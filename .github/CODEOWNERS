@@ -1,0 +1,27 @@
+# Review ownership by path. Teams are defined in MAINTAINERS.md.
+# The last matching pattern wins.
+
+*                          @team1-turkiye/snowshoe-core
+
+/skills/                   @team1-turkiye/snowshoe-skills
+/packages/                 @team1-turkiye/snowshoe-mcp
+/kits/                     @team1-turkiye/snowshoe-kits
+/ideas/                    @team1-turkiye/snowshoe-community
+/community/                @team1-turkiye/snowshoe-community
+/docs/                     @team1-turkiye/snowshoe-docs
+/README.md                 @team1-turkiye/snowshoe-docs
+/README.tr.md              @team1-turkiye/snowshoe-docs
+
+# Security-sensitive paths need the security team in addition to the core team.
+/SECURITY.md               @team1-turkiye/snowshoe-core @team1-turkiye/snowshoe-security
+/docs/supply-chain-rules.md @team1-turkiye/snowshoe-core @team1-turkiye/snowshoe-security
+/packages/mcp-server/      @team1-turkiye/snowshoe-mcp @team1-turkiye/snowshoe-security
+
+# Infrastructure and governance stay with the core team.
+/.github/                  @team1-turkiye/snowshoe-core
+/.githooks/                @team1-turkiye/snowshoe-core
+/scripts/                  @team1-turkiye/snowshoe-core
+/schemas/                  @team1-turkiye/snowshoe-core
+/prompts/                  @team1-turkiye/snowshoe-core @team1-turkiye/snowshoe-docs
+/GOVERNANCE.md             @team1-turkiye/snowshoe-core
+/MAINTAINERS.md            @team1-turkiye/snowshoe-core

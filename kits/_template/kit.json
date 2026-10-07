@@ -1,0 +1,11 @@
+{
+  "name": "__NAME__",
+  "description": "Replace with one sentence that says what this kit builds.",
+  "owner": "@your-github-handle",
+  "status": "draft",
+  "network": "fuji",
+  "stack": ["node", "solidity"],
+  "entry": "npm run dev",
+  "time_to_first_run_minutes": 15,
+  "skills": []
+}

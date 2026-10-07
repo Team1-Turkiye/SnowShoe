@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "skill-frontmatter",
+  "title": "Skill frontmatter",
+  "description": "Reference schema for SKILL.md frontmatter. scripts/validate-skills.mjs is the enforced source of truth.",
+  "type": "object",
+  "required": ["name", "description", "journey", "network", "status", "owner", "version"],
+  "properties": {
+    "name": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "description": { "type": "string", "minLength": 40, "maxLength": 300 },
+    "journey": { "enum": ["learn", "idea", "build", "launch", "ecosystem"] },
+    "network": { "enum": ["fuji", "mainnet", "both", "none"] },
+    "status": { "enum": ["draft", "verified", "deprecated"] },
+    "owner": { "type": "string", "pattern": "^@[A-Za-z0-9-]+$" },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "last_verified": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "requires": { "type": "array", "items": { "type": "string" } },
+    "tools": { "type": "array", "items": { "type": "string" } },
+    "tags": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": false
+}

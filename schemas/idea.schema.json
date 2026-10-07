@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "idea-frontmatter",
+  "title": "Idea frontmatter",
+  "description": "Reference schema for idea frontmatter. scripts/validate-ideas.mjs is the enforced source of truth.",
+  "type": "object",
+  "required": ["title", "track", "difficulty", "status", "proposer"],
+  "properties": {
+    "title": { "type": "string", "minLength": 5 },
+    "track": { "enum": ["learn", "idea", "build", "launch", "ecosystem"] },
+    "difficulty": { "enum": ["starter", "intermediate", "advanced"] },
+    "status": { "enum": ["open", "claimed", "shipped"] },
+    "proposer": { "type": "string", "pattern": "^@[A-Za-z0-9-]+$" },
+    "claimed_by": { "type": "string", "pattern": "^@[A-Za-z0-9-]+$" },
+    "skills_needed": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": false
+}
