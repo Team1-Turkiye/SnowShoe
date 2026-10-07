@@ -4,7 +4,7 @@
 
 | Name | Role | Areas |
 | --- | --- | --- |
-| Ömer Aksu | Team1 Türkiye Tech Lead, Tech Lead sponsor | Governance, architecture, community |
+| Ömer Aksu | Team1 Türkiye Tech Lead, Tech Lead sponsor, Co-maintainer | Governance, architecture, community |
 | Meriç Kalkan | Co-maintainer | Skills, MCP |
 | Eelvanpsd | Co-maintainer | Skills, MCP |
 
